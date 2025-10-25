@@ -23,6 +23,9 @@
   background-color: #f7f7f7;
   border-radius: 2rem;
   padding: 2rem;
+  width: 100%;
+  max-width:450px;
+  margin: auto;
 }
 .panel__card .card__header {
   width: 100%;
@@ -61,17 +64,20 @@
 }
 .card__main {
   width: 100%;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
 }
 .card__main ul li {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   padding: 1.5rem 2rem;
   color: #130505;
   border-radius: 44px;
   font-size: 1.4rem;
+}
+.card__main ul li:last-child {
+  margin-top: 4rem;
 }
 .card__main ul li span {
   display: flex;
