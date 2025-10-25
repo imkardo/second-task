@@ -10,7 +10,6 @@
 .container {
   max-width: 1240px;
   margin: 0 auto;
-  background: rgba(255, 207, 207, 0.667);
 }
 .panel {
   display: grid;
@@ -24,7 +23,7 @@
   border-radius: 2rem;
   padding: 2rem;
   width: 100%;
-  max-width:450px;
+  max-width:55rem;
   margin: auto;
 }
 .panel__card .card__header {
@@ -86,4 +85,17 @@
 .card__main ul .selected {
   color: #fff;
   background-color: #2f0d0c;
+}
+.content__header ul{
+    display: flex;
+    justify-content: space-between;
+}
+.content__header ul li{
+    border: 1px solid #EBEBEB;
+    padding: 2rem;
+}
+@media screen and (min-width:1024px){
+.panel{
+    grid-template-columns: 30fr 70fr;
+}    
 }
