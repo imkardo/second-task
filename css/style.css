@@ -23,8 +23,9 @@
   border-radius: 2rem;
   padding: 2rem;
   width: 100%;
+  height: fit-content;
   max-width: 55rem;
-  margin: auto;
+  margin: 0 auto;
 }
 .panel__card .card__header {
   width: 100%;
@@ -81,15 +82,27 @@
 .card__main ul li span {
   display: flex;
   align-items: center;
+  gap: 1rem;
 }
 .card__main ul .selected {
   color: #fff;
   background-color: #2f0d0c;
 }
+.card__main ul li.message {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+  padding-right: 1.8rem;
+}
+.message .badge {
+  align-self: flex-end;
+}
 .panel__content {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+
 }
 .content__header ul {
   display: flex;
@@ -221,7 +234,9 @@
   justify-content: center;
   background-color: #fff;
   border-radius: 1.2rem;
-  margin-left: 2.2rem;
+  /* margin-left: 2.2rem; */
+}
+.order__item main ul li img {
 }
 .about__order {
   display: flex;
@@ -231,6 +246,23 @@
   font-size: 1.4rem;
   color: #cc312d;
   font-weight: 700;
+}
+.badge {
+  border: 0.5px solid #000;
+  width: fit-content;
+  padding: 0.4rem 1rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  background-color: #eae7e7;
+  font-weight: 700;
+}
+.badge--primary {
+  background-color: #cc312d;
+  border-color: #cc312d;
+  color: #fff;
+}
+.order__item main ul .badge {
+  transform: translate(14px, 27px);
 }
 @media screen and (min-width: 1024px) {
   .panel {
