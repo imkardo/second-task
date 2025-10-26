@@ -198,6 +198,40 @@
   font-size: 1.1rem;
   font-weight: 100;
 }
+.order__item main {
+  margin-top: 1.6rem;
+  padding: 1.6rem;
+  border-radius: 1.6rem;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.order__item main ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.order__item main ul li {
+  width: 7rem;
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 1.2rem;
+  margin-left: 2.2rem;
+}
+.about__order {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  font-size: 1.4rem;
+  color: #cc312d;
+  font-weight: 700;
+}
 @media screen and (min-width: 1024px) {
   .panel {
     grid-template-columns: 30fr 70fr;
