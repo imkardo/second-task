@@ -291,6 +291,7 @@
 .order__item main ul .badge {
   transform: translate(14px, 27px);
 }
+/* Responsive */
 @media screen and (min-width: 768px) {
   .panel {
     grid-template-columns: 40fr 60fr;
