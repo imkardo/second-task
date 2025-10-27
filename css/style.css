@@ -13,19 +13,20 @@
 }
 .panel {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 400px);
+  justify-content: center;
   gap: 2rem;
-  padding: 1.5rem;
+  padding: 2rem;
   margin: 0 auto;
 }
+/* Card */
 .panel__card {
   background-color: #f7f7f7;
   border-radius: 2rem;
   padding: 2rem;
-  width: 100%;
   height: fit-content;
-  max-width: 55rem;
   margin: 0 auto;
+  width: 100%;
 }
 .panel__card .card__header {
   width: 100%;
@@ -98,44 +99,64 @@
 .message .badge {
   align-self: flex-end;
 }
+
+.content__header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 1.5rem;
+  border-bottom: 0.2rem solid #f6f6f6;
+  padding-bottom: 1.5rem;
+  position: relative;
+}
+.content__header span {
+  position: absolute;
+  right: 0rem;
+}
 .panel__content {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-
+  width: 100%;
+  margin: 0 auto;
+  overflow: visible;
 }
-.content__header ul {
+.order__list ul {
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1.5rem;
+  overflow: auto;
+  overflow-x: scroll;
+  padding-bottom: 2rem;
 }
-.content__header ul li {
+.order__list ul li {
   border: 1px solid #ebebeb;
-  padding: 2rem;
+  padding: 2rem 3rem;
   display: flex;
   gap: 1rem;
-  width: 100%;
   border-radius: 1.6rem;
+  flex: 0 0 auto;
 }
-.content__header ul li span {
+.order__list ul li span {
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-radius: 1rem;
   align-items: flex-start;
+  line-height: 2.55rem;
 }
-.content__header ul li .content__list--icon {
+.order__list ul li .content__list--icon {
   align-items: center;
   width: 5rem;
   height: 5rem;
   justify-content: center;
 }
-.content__header--title {
+.order__list--title {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.content__header--title:first-child {
+.order__list--title:first-child {
   font-size: 1.3rem;
   color: #494a48;
 }
@@ -153,119 +174,4 @@
 }
 .canceled {
   background-color: #e5303f1a;
-}
-.content__body {
-  display: flex;
-  flex-direction: column;
-  gap: 1.6rem;
-}
-.order__item header {
-  display: flex;
-  flex-direction: column;
-  gap: 1.6rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid #ebebeb;
-}
-.content__body .order__item {
-  border: 1px solid #ebebeb;
-  border-radius: 1.6rem;
-  padding: 2rem;
-}
-.order__status {
-  background-color: #448cf91a;
-  padding: 0.6rem 1.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
-  border-radius: 4rem;
-  gap: 1rem;
-  font-size: 1.2rem;
-  color: #2e7af1;
-}
-.order__status span {
-  display: flex;
-  align-items: center;
-}
-.order__status span img {
-  width: 2.3rem;
-}
-.order__details {
-  font-size: 1.4rem;
-  display: flex;
-  justify-content: space-between;
-  font-weight: bold;
-}
-.order__details .order__about {
-  display: flex;
-  gap: 2rem;
-}
-.order__about--titles {
-  color: #606060;
-}
-.order__price {
-  font-size: 2.4rem;
-  font-weight: bold;
-}
-.unit {
-  font-size: 1.1rem;
-  font-weight: 100;
-}
-.order__item main {
-  margin-top: 1.6rem;
-  padding: 1.6rem;
-  border-radius: 1.6rem;
-  background-color: #f7f7f7;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-.order__item main ul {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.order__item main ul li {
-  width: 7rem;
-  height: 7rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
-  border-radius: 1.2rem;
-  /* margin-left: 2.2rem; */
-}
-.order__item main ul li img {
-}
-.about__order {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  align-items: center;
-  font-size: 1.4rem;
-  color: #cc312d;
-  font-weight: 700;
-}
-.badge {
-  border: 0.5px solid #000;
-  width: fit-content;
-  padding: 0.4rem 1rem;
-  border-radius: 50%;
-  font-size: 1.2rem;
-  background-color: #eae7e7;
-  font-weight: 700;
-}
-.badge--primary {
-  background-color: #cc312d;
-  border-color: #cc312d;
-  color: #fff;
-}
-.order__item main ul .badge {
-  transform: translate(14px, 27px);
-}
-@media screen and (min-width: 1024px) {
-  .panel {
-    grid-template-columns: 30fr 70fr;
-  }
 }
