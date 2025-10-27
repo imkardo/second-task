@@ -99,7 +99,7 @@
 .message .badge {
   align-self: flex-end;
 }
-
+/* Contents */
 .content__header {
   display: flex;
   justify-content: center;
