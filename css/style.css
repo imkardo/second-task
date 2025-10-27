@@ -302,7 +302,8 @@
   .order__list ul {
     grid-template-columns: repeat(2, 1fr);
     justify-content: space-around;
-    overflow: hidden;
+    overflow: unset;
+    overflow-x: unset;
   }
   .content__header {
     display: none;
