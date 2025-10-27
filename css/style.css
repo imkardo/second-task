@@ -13,7 +13,7 @@
 }
 .panel {
   display: grid;
-  grid-template-columns: minmax(0, 400px);
+  grid-template-columns: minmax(0, 370px);
   justify-content: center;
   gap: 2rem;
   padding: 2rem;
@@ -122,8 +122,8 @@
   overflow: visible;
 }
 .order__list ul {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
   gap: 1.5rem;
   overflow: auto;
   overflow-x: scroll;
@@ -147,8 +147,8 @@
 }
 .order__list ul li .content__list--icon {
   align-items: center;
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   justify-content: center;
 }
 .order__list--title {
@@ -161,7 +161,7 @@
   color: #494a48;
 }
 .order {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 .processing {
   background-color: #448cf91a;
@@ -249,6 +249,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-right: 1rem;
 }
 .order__item main ul li {
   width: 6.5rem;
@@ -258,7 +259,7 @@
   justify-content: center;
   background-color: #fff;
   border-radius: 1.2rem;
-  margin-right: -10px;
+  margin-right: -15px;
   border: 0.6rem solid #f7f7f7;
 }
 .about__order {
@@ -289,4 +290,32 @@
 }
 .order__item main ul .badge {
   transform: translate(14px, 27px);
+}
+@media screen and (min-width: 768px) {
+  .panel {
+    grid-template-columns: 40fr 60fr;
+  }
+  .order__list ul {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-around;
+  }
+  .content__header {
+    display: none;
+  }
+  .order__details {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1150px) {
+  .panel {
+    grid-template-columns: 35fr 80fr;
+  }
+  .order__list ul {
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-around;
+  }
+  .order__details .order__about {
+    flex-direction: row;
+    align-items: center;
+  }
 }
