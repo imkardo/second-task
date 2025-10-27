@@ -175,3 +175,118 @@
 .canceled {
   background-color: #e5303f1a;
 }
+.content__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.order__item header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #ebebeb;
+}
+.content__body .order__item {
+  border: 1px solid #ebebeb;
+  border-radius: 1.6rem;
+  padding: 2rem;
+}
+.order__status {
+  background-color: #448cf91a;
+  padding: 0.6rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  border-radius: 4rem;
+  gap: 1rem;
+  font-size: 1.2rem;
+  color: #2e7af1;
+}
+.order__status span {
+  display: flex;
+  align-items: center;
+}
+.order__status span img {
+  width: 2.3rem;
+}
+.order__details {
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  flex-direction: column;
+}
+.order__details .order__about {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.order__about--titles {
+  color: #606060;
+}
+.order__price {
+  font-size: 2.4rem;
+  font-weight: bold;
+  align-self: flex-end;
+}
+.unit {
+  font-size: 1.1rem;
+  font-weight: 100;
+}
+.order__item main {
+  margin-top: 1.6rem;
+  padding: 1.6rem;
+  border-radius: 1.6rem;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.order__item main ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.order__item main ul li {
+  width: 7rem;
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 1.2rem;
+  margin-right: -10px;
+  border: 0.6rem solid #f7f7f7;
+}
+.about__order {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  font-size: 1.4rem;
+  color: #cc312d;
+  font-weight: 700;
+}
+.badge {
+  display: none;
+}
+.badge {
+  border: 0.5px solid #000;
+  width: fit-content;
+  padding: 0.4rem 1rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  background-color: #eae7e7;
+  font-weight: 700;
+}
+.badge--primary {
+  background-color: #cc312d;
+  border-color: #cc312d;
+  color: #fff;
+}
+.order__item main ul .badge {
+  transform: translate(14px, 27px);
+}
