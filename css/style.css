@@ -237,7 +237,7 @@
 }
 .order__item main {
   margin-top: 1.6rem;
-  padding: 1.6rem;
+  padding: 1.6rem 1.3rem;
   border-radius: 1.6rem;
   background-color: #f7f7f7;
   display: flex;
@@ -251,8 +251,8 @@
   align-items: center;
 }
 .order__item main ul li {
-  width: 7rem;
-  height: 7rem;
+  width: 6.5rem;
+  height: 6.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -266,7 +266,7 @@
   justify-content: center;
   gap: 1rem;
   align-items: center;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #cc312d;
   font-weight: 700;
 }
