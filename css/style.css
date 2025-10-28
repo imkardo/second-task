@@ -143,8 +143,9 @@
 }
 .order__list ul li {
   border: 0.1rem solid var(--color-border);
-  padding: 2rem 3rem;
+  padding: 1.6rem 2rem;
   display: flex;
+  align-items: center;
   gap: 1rem;
   border-radius: 1.6rem;
   flex: 0 0 auto;
