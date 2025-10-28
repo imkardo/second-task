@@ -20,11 +20,10 @@
   margin: 0 auto;
 }
 .panel {
-  display: grid;
-  grid-template-columns: minmax(0, 37rem);
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 2rem;
-  padding: 2rem;
+  padding: 1.6rem;
   margin: 0 auto;
 }
 
@@ -35,7 +34,7 @@
   padding: 2rem;
   height: fit-content;
   margin: 0 auto;
-  width: 100%;
+  
 }
 .panel__card .card__header {
   width: 100%;
@@ -116,7 +115,7 @@
   width: 100%;
   font-size: 1.5rem;
   border-bottom: 0.2rem solid #f6f6f6;
-  padding-bottom: 1.5rem;
+  padding: 1.5rem 0;
   position: relative;
 }
 .content__header span {
@@ -311,7 +310,9 @@
 /* Responsive */
 @media screen and (min-width: 768px) {
   .panel {
+    display: grid;
     grid-template-columns: 40fr 60fr;
+    gap: 2rem;
   }
   .order__list ul {
     grid-template-columns: repeat(2, 1fr);
