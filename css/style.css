@@ -7,21 +7,30 @@
   padding: 0;
   list-style: none;
 }
+
+/* Root Variable */
+:root {
+  --color-primary: #cc312d;
+  --color-border: #ebebeb;
+  --color-background: #f7f7f7;
+  --color-white: #fff;
+}
 .container {
-  max-width: 1240px;
+  max-width: 124rem;
   margin: 0 auto;
 }
 .panel {
   display: grid;
-  grid-template-columns: minmax(0, 370px);
+  grid-template-columns: minmax(0, 35rem);
   justify-content: center;
   gap: 2rem;
   padding: 2rem;
   margin: 0 auto;
 }
+
 /* Card */
 .panel__card {
-  background-color: #f7f7f7;
+  background-color: var(--color-background);
   border-radius: 2rem;
   padding: 2rem;
   height: fit-content;
@@ -34,7 +43,7 @@
   align-items: center;
   justify-content: space-between;
   padding-bottom: 1.5rem;
-  border-bottom: 1.5px solid #e6e6e6;
+  border-bottom: 0.15rem solid #e6e6e6;
 }
 .panel__card .card__header .user__info {
   display: flex;
@@ -48,13 +57,13 @@
   gap: 1.3rem;
 }
 .user--icon {
-  width: 56px;
-  height: 56px;
+  width: 5.6rem;
+  height: 5.6rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
-  border-radius: 12px;
+  background-color: var(--color-white);
+  border-radius: 1.2rem;
 }
 .user__name {
   font-size: 1.6rem;
@@ -74,7 +83,7 @@
   margin-top: 1.5rem;
   padding: 1.5rem 2rem;
   color: #130505;
-  border-radius: 44px;
+  border-radius: 4.4rem;
   font-size: 1.4rem;
 }
 .card__main ul li:last-child {
@@ -86,7 +95,7 @@
   gap: 1rem;
 }
 .card__main ul .selected {
-  color: #fff;
+  color: var(--color-white);
   background-color: #2f0d0c;
 }
 .card__main ul li.message {
@@ -99,6 +108,7 @@
 .message .badge {
   align-self: flex-end;
 }
+
 /* Contents */
 .content__header {
   display: flex;
@@ -121,16 +131,18 @@
   margin: 0 auto;
   overflow: visible;
 }
+
+/* Orders Status */
 .order__list ul {
   display: grid;
-  grid-template-columns: repeat(4, 200px);
+  grid-template-columns: repeat(4, 20rem);
   gap: 1.5rem;
   overflow: auto;
   overflow-x: scroll;
   padding-bottom: 2rem;
 }
 .order__list ul li {
-  border: 1px solid #ebebeb;
+  border: 0.1rem solid var(--color-border);
   padding: 2rem 3rem;
   display: flex;
   gap: 1rem;
@@ -138,7 +150,7 @@
   flex: 0 0 auto;
 }
 .order__list ul li:hover {
-  border: 1px solid #cc312d;
+  border: 0.1rem solid var(--color-primary);
 }
 .order__list ul li span {
   display: flex;
@@ -188,10 +200,12 @@
   flex-direction: column;
   gap: 1.6rem;
   padding-bottom: 2rem;
-  border-bottom: 1px solid #ebebeb;
+  border-bottom: 0.1rem solid var(--color-border);
 }
+
+/* Order Items */
 .content__body .order__item {
-  border: 1px solid #ebebeb;
+  border: 0.1rem solid var(--color-border);
   border-radius: 1.6rem;
   padding: 2rem;
 }
@@ -242,7 +256,7 @@
   margin-top: 1.6rem;
   padding: 1.6rem 1.3rem;
   border-radius: 1.6rem;
-  background-color: #f7f7f7;
+  background-color: var(--color-background);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -260,10 +274,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
+  background-color: var(--color-white);
   border-radius: 1.2rem;
-  margin-right: -15px;
-  border: 0.6rem solid #f7f7f7;
+  margin-right: -1.5rem;
+  border: 0.6rem solid var(--color-background);
 }
 .about__order {
   display: flex;
@@ -271,29 +285,28 @@
   gap: 1rem;
   align-items: center;
   font-size: 1.2rem;
-  color: #cc312d;
+  color: var(--color-primary);
   font-weight: 700;
 }
+/* Badge */
 .badge {
   display: none;
 }
 .badge {
-  border: 0.5px solid #000;
+  border: 0.05rem solid #000;
   width: fit-content;
-  padding: 0.4rem 1rem;
+  padding: 0.15rem 0.7rem;
   border-radius: 50%;
-  font-size: 1.2rem;
-  background-color: #eae7e7;
+  font-size: 1.1rem;
+  background-color: var(--color-background);
   font-weight: 700;
 }
 .badge--primary {
-  background-color: #cc312d;
-  border-color: #cc312d;
-  color: #fff;
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
 }
-.order__item main ul .badge {
-  transform: translate(14px, 27px);
-}
+
 /* Responsive */
 @media screen and (min-width: 768px) {
   .panel {
@@ -310,6 +323,10 @@
   }
   .order__details {
     flex-direction: row;
+  }
+  .order__item main ul .badge {
+    display: block;
+    transform: translate(1.4rem, 2.7rem);
   }
 }
 @media screen and (min-width: 1150px) {
