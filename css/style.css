@@ -327,7 +327,7 @@
   }
   .order__item main ul .badge {
     display: block;
-    transform: translate(1.4rem, 2.7rem);
+    transform: translate(2rem, 2.5rem);
   }
 }
 @media screen and (min-width: 1150px) {
