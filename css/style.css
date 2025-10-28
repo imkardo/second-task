@@ -334,7 +334,7 @@
     transform: translate(2rem, 2.5rem);
   }
 }
-@media screen and (min-width: 910px) {
+@media screen and (min-width: 1024px) {
   .panel {
     grid-template-columns: 25fr 75fr;
   }
