@@ -86,6 +86,13 @@
   border-radius: 4.4rem;
   font-size: 1.4rem;
 }
+.card__main ul li:hover {
+  color: var(--color-white);
+  background-color: #2f0d0c;
+}
+.card__main ul li:hover svg path {
+  fill: var(--color-white) !important;
+}
 .card__main ul li:last-child {
   margin-top: 4rem;
 }
@@ -94,16 +101,11 @@
   align-items: center;
   gap: 1rem;
 }
-.card__main ul .selected {
-  color: var(--color-white);
-  background-color: #2f0d0c;
-}
 .card__main ul li.message {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 0;
-  padding-right: 1.8rem;
+  padding: 1.5rem;
 }
 .message .badge {
   align-self: flex-end;
